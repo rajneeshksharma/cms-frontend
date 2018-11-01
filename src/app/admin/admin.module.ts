@@ -9,6 +9,9 @@ import { BreadcrumbComponent } from './shared/layout/breadcrumb/breadcrumb.compo
 
 import { RouterModule } from '@angular/router';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { HomeComponent } from './home/home.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   imports: [
@@ -16,7 +19,7 @@ import { AdminhomeComponent } from './adminhome/adminhome.component';
     AdminRoutingModule,
     RouterModule
   ],
-  declarations: [AdminComponent, HeaderComponent, FooterComponent, SidebarComponent, BreadcrumbComponent, AdminhomeComponent],
+  declarations: [AdminComponent, HeaderComponent, FooterComponent, SidebarComponent, BreadcrumbComponent, AdminhomeComponent, HomeComponent, ContactusComponent, AboutusComponent],
   exports: [
     RouterModule
   ]
