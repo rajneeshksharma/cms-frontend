@@ -1,0 +1,211 @@
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+}
+.wrapper { border:1px solid red;}
+
+
+.social{
+    height: 19px;
+    width: 19px;
+}
+
+.nav_bar{
+    background-color: rgb(255, 255, 255);
+    padding-left: 30px;
+    margin-top: 3px;
+    /*padding: 5px 10px 5px 10px;*/
+}
+.nav_bar li{
+    display: inline;
+    padding-left: 20px;
+}
+
+
+.mid_bar{
+    background-color:rgb(255, 255, 255);
+    padding: 9px 0px 3px 4px;
+    padding-left: 73px;
+      
+}
+.gbc{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(28, 113, 170);
+    font-size: 50px;
+}
+.data{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(116, 106, 124);
+    font-size: 50px;
+}
+.gbc1{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 20px;
+} 
+.wrap { max-width:1100px;margin:0 auto;}
+.midbar2{
+
+}
+.social5{
+height: 110px;
+width: 250px;
+}
+.last_bar {
+    overflow: hidden;
+    background-color: rgb(28, 113, 170);
+  
+    padding-left: 75px;
+   
+    width: 100%;
+  }
+  
+  .last_bar a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+   
+  }
+  
+  .last_bar a:hover 
+  { background-color:#84a6ec;}
+  
+#signin{
+    float:right;
+  }
+
+.body{
+    width: 100%;
+      height: auto;
+  }
+  .inner{
+      margin: 20px 50px 19px 73px;
+      padding-right: 25px; 
+
+  }
+  .p{
+      text-align: justify;
+      
+  }
+  .signup{
+    margin: 14px 60px 13px 72px;
+    padding-right: 0px;
+    background-color: rgb(28, 113, 170);
+    height: 123px;
+    width: auto; 
+  }
+  .signup1{
+    width: 65%;
+    padding-left: 35px;
+    padding-top: 14px;
+    color: rgb(255, 255, 255);
+  }
+
+.signup2{
+    width: 30%;
+    float: right;
+    padding-top: 7px;
+    margin-top: -39px;
+    margin-left: -96px;
+    color: rgb(255, 246, 246);
+}
+.buttonlink{
+    border-style:solid;
+	border-color:rgb(255, 255, 255) rgb(255, 255, 255) rgb(255, 255, 255) rgb(255, 255, 255);
+	border-width:1px 1px 1px 1px;
+    display: block;
+    width: 14em;
+    height: 2em;
+    background: #3371aa;
+    color: rgb(255, 255, 255);
+    line-height: 2;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 900;
+}
+.que{
+    margin: 35px 60px 13px 72px;
+    padding-right: 0px;
+    height: 123px;
+    width: auto; 
+    text-align: center;
+    color: rgb(28, 113, 170);
+  }
+  .que2{
+      text-align: center;
+      font-size: 15px;
+      color: black;
+
+  }
+  
+  
+
+.footer{
+    
+    background-color: rgb(28, 113, 170);
+    height: 360px;
+    
+    
+}
+.foot1{
+    background-color: rgb(28, 113, 170);
+    color: white;
+    float: left;
+    height: auto;
+    width: 25%;
+    padding: 30px 0px 0px 0px;
+    margin-left: 20px; 
+     
+  
+}
+.foot2{
+    background-color: rgb(28, 113, 170);
+    color: white;
+    float: left;
+    height: auto;
+    width: 25%;
+    padding: 30px 0px 0px 0px;
+    margin-left: 25px; 
+     
+}
+.foot3{
+    background-color: rgb(28, 113, 170);
+    color: white;
+    float: left;
+    height: auto;
+    width: 16%;
+    padding: 30px 0px 0px 0px;
+    margin-left: 30px; 
+}
+.foot4{
+    background-color: rgb(28, 113, 170);
+    color: white;
+    float: left;
+    height: auto;
+    width: 25%;
+    padding: 30px 0px 0px 0px;
+    margin-left: 20px;   
+    
+}
+.inline {
+    float: left;
+    text-decoration: none;
+    display: table-cell;
+}
+.social2{
+    height: 20px;
+    width: 20px;
+}
+.social3{
+    height: 30px;
+    width: 30px;
+}
+.copyr{
+    
+}
