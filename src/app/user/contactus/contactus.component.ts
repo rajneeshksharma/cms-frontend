@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiuserService } from '../shared/service/apiuser.service';
 
 @Component({
   selector: 'app-contactus',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contactus.component.css']
 })
 export class ContactusComponent implements OnInit {
+  contactusData: String;
 
-  constructor() { }
+  constructor(private apiService: ApiuserService) { }
 
   ngOnInit() {
+    this.apiService.getContactusPageData().subscribe(res => {
+      console.log(res);
+      this.contactusData = res.contactus;
+    },
+    err => {
+      console.error(err);
+    }
+    );
   }
 
 }

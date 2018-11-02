@@ -10,12 +10,14 @@ import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     UserRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   declarations: [
     UserComponent,
