@@ -15,12 +15,6 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
 import {ButtonModule} from 'primeng/button';
 import { MessageService } from 'primeng/components/common/messageservice';
-const routes: Routes = [
-  {path: '', redirectTo: 'user', pathMatch: 'full' },
-  {path: 'user', loadChildren: './user/user.module#UserModule'},
-  {path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
-  {path: '**', redirectTo: 'user'}
-];
 
 
 @NgModule({
@@ -39,7 +33,6 @@ const routes: Routes = [
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
     FroalaEditorModule.forRoot(),
     FroalaViewModule.forRoot()
   ],
