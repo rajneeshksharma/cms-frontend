@@ -17,10 +17,10 @@ export class HomeComponent implements OnInit {
       private confirmationService: ConfirmationService) { }
 
   ngOnInit() {
-    this.apiService.getHomePageData().subscribe(res => {
+    this.apiService.getCmsPageData('home').subscribe(res => {
       console.log(res);
 
-      this.homeData = res.home;
+      this.homeData = res.content;
       this.homeId = res._id;
     },
       err => {
@@ -30,10 +30,10 @@ export class HomeComponent implements OnInit {
   }
 
   reset() {
-    this.apiService.getHomePageData().subscribe(res => {
+    this.apiService.getCmsPageData('home').subscribe(res => {
       console.log(res);
 
-      this.homeData = res.home;
+      this.homeData = res.content;
       this.homeId = res._id;
     },
       err => {
@@ -51,9 +51,10 @@ export class HomeComponent implements OnInit {
         this.msgs = [{ severity: 'info', summary: 'Confirmed', detail: 'Requesting for changing data' }];
         const homeData = {
           id: this.homeId,
-          home: data
+          slug : 'home',
+          content: data
         };
-        this.apiService.sendHomePageData(homeData).subscribe(
+        this.apiService.sendCmsPageData(homeData).subscribe(
           res => {
             console.log(res);
           },

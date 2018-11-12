@@ -16,9 +16,9 @@ export class ContactusComponent implements OnInit {
       private confirmationService: ConfirmationService) { }
 
   ngOnInit() {
-    this.apiService.getContactusPageData().subscribe(res => {
+    this.apiService.getCmsPageData('contactus').subscribe(res => {
       console.log(res);
-      this.contactusData = res.contactus;
+      this.contactusData = res.content;
       this.constactusId = res._id;
     },
     err => {
@@ -28,10 +28,10 @@ export class ContactusComponent implements OnInit {
   }
 
   reset() {
-    this.apiService.getContactusPageData().subscribe(res => {
+    this.apiService.getCmsPageData('contactus').subscribe(res => {
       console.log(res);
 
-      this.contactusData = res.contactus;
+      this.contactusData = res.content;
       this.constactusId = res._id;
     },
       err => {
@@ -49,9 +49,10 @@ export class ContactusComponent implements OnInit {
         this.msgs = [{ severity: 'info', summary: 'Confirmed', detail: 'Requesting for changing data' }];
         const contactusData = {
               id : this.constactusId,
-              contactus : data
+              slug : 'contactus',
+              content : data
             };
-            this.apiService.sendContactusPageData(contactusData).subscribe(
+            this.apiService.sendCmsPageData(contactusData).subscribe(
               res => {
                 console.log(res);
               },

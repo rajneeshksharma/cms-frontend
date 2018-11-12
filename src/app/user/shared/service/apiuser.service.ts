@@ -8,16 +8,9 @@ export class ApiuserService {
 URI = 'http://localhost:8000/api/cms/';
   constructor(private http: HttpClient) { }
 
-  getHomePageData(): Observable<any> {
-    return this.http.get(`${this.URI}/home`);
+  getCmsPageData(data): Observable<any> {
+    console.log(data);
+    return this.http.get(`${this.URI}/cmspage?slug=${data}`);
   }
-  getAboutusPageData(): Observable<any> {
-    return this.http.get(`${this.URI}/aboutus`);
-  }
-
-  getContactusPageData(): Observable<any> {
-    return this.http.get(`${this.URI}/contactus`);
-  }
-
 
 }

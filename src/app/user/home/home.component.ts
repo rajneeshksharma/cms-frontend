@@ -11,9 +11,9 @@ export class HomeComponent implements OnInit {
   constructor(private apiService: ApiuserService ) { }
 
   ngOnInit() {
-    this.apiService.getHomePageData().subscribe(res => {
+    this.apiService.getCmsPageData('home').subscribe(res => {
       console.log(res);
-      this.homeData = res.home;
+      this.homeData = res.content;
     },
     err => {
       console.error(err);

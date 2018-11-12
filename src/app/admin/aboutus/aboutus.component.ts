@@ -17,9 +17,9 @@ export class AboutusComponent implements OnInit {
       private confirmationService: ConfirmationService) { }
 
   ngOnInit() {
-    this.apiService.getAboutusPageData().subscribe(res => {
+    this.apiService.getCmsPageData('aboutus').subscribe(res => {
       console.log(res);
-      this.aboutusData = res.aboutus;
+      this.aboutusData = res.content;
       this.aboutusId = res._id;
     },
     err => {
@@ -29,10 +29,10 @@ export class AboutusComponent implements OnInit {
   }
 
   reset() {
-    this.apiService.getAboutusPageData().subscribe(res => {
+    this.apiService.getCmsPageData('aboutus').subscribe(res => {
       console.log(res);
 
-      this.aboutusData = res.contactus;
+      this.aboutusData = res.content;
       this.aboutusId = res._id;
     },
       err => {
@@ -50,9 +50,10 @@ export class AboutusComponent implements OnInit {
         this.msgs = [{ severity: 'info', summary: 'Confirmed', detail: 'Requesting for changing data' }];
         const aboutusData = {
               id : this.aboutusId,
-              contactus : data
+              slug : 'aboutus',
+              content : data
             };
-            this.apiService.sendAboutusPageData(aboutusData).subscribe(
+            this.apiService.sendCmsPageData(aboutusData).subscribe(
               res => {
                 console.log(res);
               },

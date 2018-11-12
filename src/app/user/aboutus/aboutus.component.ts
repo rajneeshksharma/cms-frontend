@@ -11,9 +11,9 @@ export class AboutusComponent implements OnInit {
   constructor( private apiService: ApiuserService) { }
 
   ngOnInit() {
-    this.apiService.getAboutusPageData().subscribe(res => {
+    this.apiService.getCmsPageData('aboutus').subscribe(res => {
       console.log(res);
-      this.aboutusData = res.aboutus;
+      this.aboutusData = res.content;
     },
     err => {
       console.error(err);

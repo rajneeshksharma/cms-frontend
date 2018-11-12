@@ -8,22 +8,11 @@ export class ApiService {
 URI = 'http://localhost:8000/api/cms/';
   constructor(private http: HttpClient) { }
 
-  getHomePageData(): Observable<any> {
-    return this.http.get(`${this.URI}/home`);
+  getCmsPageData(data): Observable<any> {
+    return this.http.get(`${this.URI}/cmspage?slug=${data}`);
   }
-  sendHomePageData(data): Observable<any> {
-    return this.http.post(`${this.URI}/home`, data);
+  sendCmsPageData(data): Observable<any> {
+    return this.http.post(`${this.URI}/cmspage`, data);
   }
-  getAboutusPageData(): Observable<any> {
-    return this.http.get(`${this.URI}/aboutus`);
-  }
-  sendAboutusPageData(data): Observable<any> {
-    return this.http.post(`${this.URI}/aboutus`, data);
-  }
-  getContactusPageData(): Observable<any> {
-    return this.http.get(`${this.URI}/contactus`);
-  }
-  sendContactusPageData(data): Observable<any> {
-    return this.http.post(`${this.URI}/contactus`, data);
-  }
+
 }

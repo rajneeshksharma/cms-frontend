@@ -12,9 +12,9 @@ export class ContactusComponent implements OnInit {
   constructor(private apiService: ApiuserService) { }
 
   ngOnInit() {
-    this.apiService.getContactusPageData().subscribe(res => {
+    this.apiService.getCmsPageData('contactus').subscribe(res => {
       console.log(res);
-      this.contactusData = res.contactus;
+      this.contactusData = res.content;
     },
     err => {
       console.error(err);
