@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-URI = 'https://lit-island-67325.herokuapp.com//api';
+URI = 'https://lit-island-67325.herokuapp.com/api';
   constructor(private http: HttpClient) { }
 
   getCmsPageData(data): Observable<any> {
